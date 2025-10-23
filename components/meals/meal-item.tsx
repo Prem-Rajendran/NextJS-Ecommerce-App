@@ -4,7 +4,7 @@ import styles from './meal-item.module.css';
 import React from 'react';
 import { MealItemModel } from '@/models/meal-item';
 
-type MealItemProps = Omit<MealItemModel, 'id'>
+type MealItemProps = Omit<MealItemModel, 'id' | 'creator_email' | 'instructions'>
 
 const MealItem: React.FC<MealItemProps> = ({ title, slug, image, summary, creator }) => {
     return (
