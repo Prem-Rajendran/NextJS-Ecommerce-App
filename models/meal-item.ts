@@ -8,3 +8,7 @@ export interface MealItemModel {
     instructions: string
     creator_email: string
 }
+
+export interface MealItemFormModel extends Omit<MealItemModel, 'image' | 'slug' | 'id'> {
+    image: File
+}
